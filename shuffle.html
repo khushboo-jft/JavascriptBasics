@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            shuffle
+        </title>
+    </head>
+    <body>
+        <script>
+            let names=["hema","khuss","appi"];
+            console.log(names);
+            Array.prototype.shuffle=function(){
+                for(let i=0;i<this.length;i++){
+                    let temp="".concat(this[i]);
+                    let pos=Math.floor(Math.random()*this.length);
+                    let other ="".concat(this[pos]);
+                    this[i]=other;
+                    this[pos]=temp;
+                }
+                return this;
+            }
+            console.log(names.shuffle().shuffle());
+        </script>
+    </body>
+    
+</html>

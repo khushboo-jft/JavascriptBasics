@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>Prototype </title>
+    </head>
+    <body>
+        <h2>Arrays </h2>
+        <p id="demo"></p>
+        <script>
+            //new method
+            Array.prototype.myUcase=function(){
+                for(let i=0;i<this.length;i++){
+                    this[i]=this[i].toUppercase()
+                }
+
+            };
+
+            //use method
+            const colour=["red","blue","yelloe","green"];
+            colour.myUcase();
+            document.getElementById("demo").innerHTML=colour;
+        </script>
+    </body>
+</html>
