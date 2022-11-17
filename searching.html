@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search a number</title>
+    </head>
+    <body>
+        <script>
+            let arr=[1,2,7,9,4,6,7,3,5];
+            let n;
+            Array.prototype.search=function(n){
+                let index;
+                for(let i=0;i<this.length;i++){
+                    if(this[i]==n){
+                        index=i;
+                    }
+                    else{
+                        i++;
+                    }
+                }
+                return index;
+            }
+
+            console.log(arr.search(7));
+            </script>
+    </body>
+</html>
